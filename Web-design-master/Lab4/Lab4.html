@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    div { 
+      background-color:#cbb;
+      width:100px; 
+      border:1px solid green;
+    }
+  </style>
+  <script src="jquery-1.12.0.min.js"></script>
+</head>
+<body>
+  <button id="go">» Нажми</button>
+
+  <div id="block">Поехали</div>
+  <script>
+    // Произведем изменение нескольких css-величин в ходе одной анимации.
+    $("#go").click(function()
+    {
+      $("#block").animate(
+      { 
+        marginLeft: "15.5in",  
+      }, 1500);             
+      $("#block").animate(
+      { 
+        marginLeft: "0in",  
+      }, 1500);  
+      $("#block").animate(
+      { 
+        marginTop: "5in",  
+      }, 1500); 
+      $("#block").animate(
+      { 
+        marginLeft: "15.5in",  
+      }, 1500);    
+      $("#block").animate(
+      { 
+        marginTop: "0in",  
+      }, 1500); 
+      $("#block").animate(
+      { 
+        marginLeft: "0in",  
+      }, 1500);  
+      $("#block").animate(
+      { 
+	marginTop: "5in",
+        marginLeft: "15in",  
+      }, 1500);
+      $("#block").animate(
+      { 
+	marginTop: "0in",
+        marginLeft: "0in",  
+      }, 1500);                  
+    });
+  </script>
+</body>
+</html>

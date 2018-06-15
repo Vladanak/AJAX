@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html>
+
+  
+
+  <head>
+    
+    <script data-require="jquery@*" data-semver="2.1.1" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+   
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.js"></script>
+     
+  </head>
+
+  
+
+  <body>
+
+    
+
+     <h3>Without sort</h3>    
+    
+     <div id="without_sort"></div>
+    
+    
+
+     <h3>Sorted by last</h3>
+    
+     <div id="sorted_last"></div>
+  
+  </body>
+
+</html>
+
+<script>
+$(function() {
+  
+	function renderSorted(selector, elements) {
+      
+	  $.each(elements, function(ind, elem)
+	  {
+        
+	    $(selector).append("<p>"+elem.name+" - "+elem.year+"</p>")
+    
+	  });
+    
+	};
+  
+    
+
+	var people = 
+	[
+      
+	  {
+         
+		"id" : 1,
+		"name":"Alesha",
+         
+		"year":"20 years"
+        
+	  },
+      
+	  {
+         
+		"id" : 2,
+		"name":"Egor",
+           
+		"year":"31 years"
+
+         
+	  },
+      
+	  {
+         
+		"id" : 3,
+		"name":"Eugen",
+            
+		"year":"12 years"
+
+         
+	  }
+,    
+	  {
+         
+		"id" : 4,
+		"name":"Helen",
+            
+		"year":"67 years"
+        
+	  }
+  
+	];
+    
+    
+    
+
+	renderSorted("#without_sort",  _.sortBy(people, "id"))
+  
+	renderSorted("#sorted_last",  _.sortBy(people, "year"))
+       
+
+});
+</script>

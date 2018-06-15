@@ -1,0 +1,66 @@
+﻿<!<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>SuperAJAX</title>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript">
+    function selectMark(){
+        var id_mark = $('select[name="Mark"]').val();
+        if(!id_mark){
+                $('div[name="selectDataMark"]').html('');
+        }else{
+                $.ajax({
+                        type: "POST",
+                        url: "Variable.php",
+                        data: { action: 'showMarkForInsert', id_mark: id_mark },
+                        cache: false,
+                        success: function(responce){ $('div[name="selectDataMark"]').html(responce); }
+                });
+        };
+};
+function selectYear(){
+        var id_year = $('select[name="Year"]').val();
+        if(!id_year){
+                $('div[name="selectDataYear"]').html('');
+        }else{
+                $.ajax({
+                        type: "POST",
+                        url: "Variable.php",
+                        data: { action: 'showYearForInsert', id_year: id_year },
+                        cache: false,
+                        success: function(responce){ $('div[name="selectDataYear"]').html(responce); }
+                });
+        };
+        };
+
+/*        function selectColor() {
+            var id_year = $('select[name="Color"]').val();
+            if (!id_year) {
+                $('div[name="selectDataColor"]').html('');
+            } else {
+                $.ajax({
+                    type: "POST",
+                    url: "Variable.php",
+                    data: { action: 'showColorForInsert', id_year: id_year },
+                    cache: false,
+                    success: function (responce) { $('div[name="selectDataColor"]').html(responce); }
+                });
+            };
+        };*/
+    </script>
+</head>
+<body>
+    <select size="1" name="Mark" onchange="javascript:selectMark();" style="float:left;">
+        <option value="">Авто</option>
+        <optgroup label="Выберите марку авто">
+        <option value="1">Audi</option>
+        <option value="2">Mersedes</option>
+        <option value="3">BMW</option>
+        <option value="4">Tesla</option>
+        </optgroup>
+        </select>
+        <div name="selectDataMark" style="float:left;"></div>
+        <div name="selectDataYear" style="float:left;"></div>
+</body>
+</html>

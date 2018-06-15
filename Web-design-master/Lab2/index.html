@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function loadXMLDoc()
+{
+    var xmlhttp=new XMLHttpRequest();
+    xmlhttp.open("GET","ajax.txt",false); //открытие синхронного соединения
+    xmlhttp.send(); 
+    document.getElementById("myDiv").innerHTML=xmlhttp.responseText;
+}
+</script>
+</head>
+<body>
+
+<div id="myDiv"><h2>After click on the button text will be change</h2></div>
+
+<button type="button" onclick="loadXMLDoc()">Change</button>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<html>
+<head>
+<script type='text/javascript'>
+   xhttp=new XMLHttpRequest();
+   xhttp.open('GET','bookbase.json',true);
+   xhttp.send();
+   xhttp.onreadystatechange=function(){
+      if (xhttp.readyState==4){
+          var json=eval( '('+xhttp.responseText+')' );
+        var numbers = []; 
+          for(i = 0; i < 4; i++) 
+               numbers.push(json.bookbase[i].cost);
+	  for(i = 0; i < 4; i++) 
+               document.write(numbers[i] + " ");
+	  for (i = 0; i < 4; i++)	
+		for (j = 0; j < 4; j++)
+		{
+			if (numbers[i] > numbers[j])		
+			var b = numbers[i];
+			numbers[i] = numbers[j];
+			numbers[j] = b;
+		}
+	  for(i = 0; i < 4; i++) 
+                document.write(numbers[i] + " ")
+      }
+   }
+</script>
+</head>
+<body>
+</div>
+</body>
+</html>

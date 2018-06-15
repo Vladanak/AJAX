@@ -1,0 +1,257 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .dropbtn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+            .dropdown-content a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+            }
+
+                .dropdown-content a:hover {
+                    background-color: #f1f1f1
+                }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #3e8e41;
+        }
+    </style>
+    <script src="jquery.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <script src="js/bootstrap.min.js"></script>
+
+
+    <title>Статья Bootstrap </title>
+</head>
+<body>
+    <h1>Привет, мир!</h1>
+    <div class="alert alert-success" role="alert">
+        Отлично!Так держать
+    </div>
+    <div class="alert alert-info" role="alert">
+        Подсказка!Тут должна быть важная информация
+    </div>
+    <div class="alert alert-warning" role="alert">
+        Warning!Будь внимательнее
+    </div>
+    <div class="alert alert-danger" role="alert">
+        Ошибка!Сервер недоступен
+    </div>
+    <button type="button" class="btn btn-default">Кнопка</button>
+    <button type="button" class="btn btn-primary">Основная</button>
+    <button type="button" class="btn btn-success">Успех</button>
+    <button type="button" class="btn btn-info">Информация</button>
+    <button type="button" class="btn btn-warning">Внимание</button>
+    <button type="button" class="btn btn-danger">Ошибка</button>
+    <button type="button" class="btn btn-link">Ссылка</button>
+    <p />
+    <button type="button" class="btn-lg btn btn-primary">Большая</button>
+    <button type="button" class="btn-md btn btn-primary">Средняя</button>
+    <button type="button" class="btn-sm btn btn-primary">Маленькая</button>
+    <button type="button" class="btn-xs btn btn-primary">Ещё меньше</button>
+    <button type="button" class="btn-block btn btn-primary">Блок</button>
+    <button type="button" class="active btn btn-primary">Активная</button>
+    <button type="button" class="disabled btn btn-primary">Неактивная</button>
+    <div class="table-striped table-bordered table-hover table-condensed table-responsive ">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Имя</th>
+                    <th>Фамилия</th>
+                    <th>Почта</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Иван</td>
+                    <td>Николайчук</td>
+                    <td>ivan@example.com</td>
+                </tr>
+                <tr>
+                    <td>Мария</td>
+                    <td>Иванова</td>
+                    <td>mary@example.com</td>
+                </tr>
+                <tr>
+                    <td>Юлия</td>
+                    <td>Петренко</td>
+                    <td>julia@example.com</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="btn-group">
+        <button type="button" class="btn btn-default">Кнопка</button>
+        <button type="button" data-toggle="dropdown" class="btn btn-default dropdown-toggle"><span class="caret"></span></button>
+        <ul class="dropdown-menu">
+            <li><a href="#">Пункт 1</a></li>
+            <li><a href="#">Пункт 2</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Пункт 3</a></li>
+        </ul>
+    </div>
+    <form role="form" class="form-inline form-horizontal">
+        <div class="form-group">
+            <label for="email">Email</label>
+
+            <input type="email" class="form-control" id="email" placeholder="Введите email">
+            <label for="pass">Пароль</label>
+            <input type="password" class="form-control" id="pass" placeholder="Пароль">
+            <input type="button" value="Войти" class="btn-danger" />
+            <p class="help-block">Пример строки с подсказкой</p>
+            <label><input type="checkbox">Забыли пароль?</label>
+        </div>
+    </form>
+    <p class="text-left" /><code class="bg-primary">1235</code>
+    <code class="bg-success">1235</code>
+    <p class="text-center" /> <code class="bg-info">1235</code>
+    <code class="bg-warning">1235</code>
+    <p class="text-right" /> <code class="bg-danger">1235</code>
+    <mark>12345123 </mark>
+
+
+    <p />
+    <img src="audi.jpg" class="img-thumbnail" style="width:150px; height:150px" /> <img src="audi.jpg" class="img-circle" style="width:150px; height:150px" /> <img src="audi.jpg" class="img-thumbnail img-rounded" style="margin:10px 10px 10px 10px; width:150px; height:150px" />
+    <p />
+    <span class="glyphicon glyphicon-name">
+        <button class="btn btn-success">
+            <i class="glyphicon glyphicon-eye-close"></i> Поставь, приятель
+        </button>
+        <a href="#">Онлайн <span class="badge">15</span></a>
+    </span>
+
+    <p />
+    <div class="dropdown">
+        <button class="dropbtn">
+            Выпадающий список
+        </button>
+        <ul class="dropdown-content">
+            <li class="divider ">HTML</li>
+            <li class="divider ">CSS</li>
+            <li class="divider ">JavaScript</li>
+            <li class="disabled">Архив уроков</li>
+        </ul>
+    </div>
+
+    <h3 class="panel-heading panel-primary">Footer</h3>
+    <div class="panel panel-primary">
+        <div class="panel-body">
+            Текстовая панель в Bootstrap
+        </div>
+    </div>
+
+    <div class="panel-group" id="collapse-group">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#collapse-group" href="#el1">Почему стоит поступать в БГТУ?</a>
+                </h4>
+            </div>
+            <div id="el1" class="panel-collapse collapse in">
+                <div class="panel-body">
+                    Современная материально-техническая база ВУЗа позволяет готовить высококвалифицированных специалистов, востребованных не только в Беларуси, но и за рубежом. Здесь вы можете увидеть некоторые фотографии нашего университета и студенческого городка(фотоальбомы обновляются).
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#collapse-group" href="#el2">Сколько факультетов в БГТУ?</a>
+                </h4>
+            </div>
+            <div id="el2" class="panel-collapse collapse">
+                <div class="panel-body">
+                    Подготовка кадров с высшим образованием осуществляется на восьми факультетах университета: лесохозяйственном, технологии и техники лесной промышленности, технологии органических веществ, химической технологии и техники, инженерно-экономическом, издательского дела и полиграфии, информационных технологиях и факультете заочного обучения для лесного хозяйства, лесозаготовительной, деревообрабатывающей, целлюлозно-бумажной, электронной, микробиологической, химической, лесохимической, машиностроительной, нефтехимической, полиграфической промышленности, для промышленности строительных материалов, медицинских препаратов, для сферы экологического туризма и природопользования, центров стандартизации и сертификации, организаций редакционно-издательского, экологического, садово-паркового профиля и других отраслей экономики Республики Беларусь. Образовательный процесс осуществляют 628 преподавателей 52 кафедры, среди них: 62 доктора наук, 395 кандидатов наук, 48 профессоров и 254 доцента.
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#collapse-group" href="#el3">Какие специальности на факультете ИТ?</a>
+                </h4>
+            </div>
+            <div id="el3" class="panel-collapse collapse">
+                <div class="panel-body">
+                    Факультет ИТ готовит специалистов по 4 специальностям:
+                    1-40 05 01 «Информационные системы и технологии» (выпускающая кафедра информационных систем и технологий)
+                    1-98 01 03 «Программное обеспечение информационной безопасности мобильных систем» (выпускающая кафедра информационных систем и технологий)
+                    1-40 01 01 «Программное обеспечение информационных технологий» (выпускающая кафедра информационных систем и технологий)
+                    1-47 01 02 «Дизайн электронных и веб-изданий» (выпускающая кафедра информационных систем и технологий)
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="btn btn-info btn-lg" type="button" data-toggle="modal" data-target="#myModal">Показать всплывающее окно</button>
+    <div id="myModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button class="close" type="button" data-dismiss="modal">×</button>
+                    <h4 class="modal-title">Заголовок окна</h4>
+                </div>
+                <div class="modal-body">Текст уведомления</div>
+                <div class="modal-footer"><button class="btn btn-default" type="button" data-dismiss="modal">Закрыть</button></div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <!-- Навигация -->
+        <ul class="nav nav-tabs" role="tablist">
+            <li class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Домой</a></li>
+            <li><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Профиль</a></li>
+            <li><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Сообщения</a></li>
+            <li><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Настройки</a></li>
+        </ul>
+        <!-- Содержимое вкладок -->
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="home">Вы дома</div>
+            <div role="tabpanel" class="tab-pane" id="profile">Информация о вашем профиле</div>
+            <div role="tabpanel" class="tab-pane" id="messages">Ваши личные сообщения</div>
+            <div role="tabpanel" class="tab-pane" id="settings">Настройка конфигурации системы</div>
+        </div>
+    </div>
+
+ <ul class="pagination">
+  <li><a href="#" class="glyphicon glyphicon-menu-left"></a></li>
+ <li><a href="#">1</a></li>
+ <li><a href="#">2</a></li>
+ <li><a href="#">3</a></li>
+ <li><a href="#">4</a></li>
+ <li><a href="#">5</a></li>
+ <li><a href="#" class="glyphicon glyphicon-menu-right"></a></li>
+ </ul>
+</body>
+</html>

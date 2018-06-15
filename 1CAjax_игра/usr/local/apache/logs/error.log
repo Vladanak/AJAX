@@ -1,0 +1,24 @@
+[Wed May 16 14:50:49 2018] [warn] Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+[Wed May 16 14:50:49 2018] [warn] pid file W:/usr/local/apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Wed May 16 14:50:49 2018] [warn] Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+[Wed May 16 14:50:50 2018] [notice] Apache/2.2.22 (Win32) mod_ssl/2.2.22 OpenSSL/1.0.1c PHP/5.3.13 configured -- resuming normal operations
+[Wed May 16 14:50:50 2018] [notice] Server built: Apr 20 2012 18:42:30
+[Wed May 16 14:50:50 2018] [notice] Parent: Created child process 4028
+[Wed May 16 14:50:50 2018] [notice] Disabled use of AcceptEx() WinSock2 API
+Apache server shutdown initiated...
+it: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+[Wed May 16 14:50:51 2018] [warn] Init: Name-based SSL virtual hosts only work for clients with TLS server name indication support (RFC 4366)
+[Wed May 16 14:50:51 2018] [notice] Child 4028: Child process is running
+[Wed May 16 14:50:51 2018] [notice] Child 4028: Acquired the start mutex.
+[Wed May 16 14:50:51 2018] [notice] Child 4028: Starting 25 worker threads.
+[Wed May 16 14:50:51 2018] [notice] Child 4028: Listening on port 443.
+[Wed May 16 14:50:51 2018] [notice] Child 4028: Listening on port 69.
+[Wed May 16 14:51:36 2018] [error] [client 127.0.0.1] File does not exist: W:/home/localhost/www/MyTest.html
+[Wed May 16 14:51:37 2018] [error] [client 127.0.0.1] File does not exist: W:/home/localhost/www/favicon.ico, referer: http://127.0.0.1:69/MyTest.html
+[Wed May 16 15:02:00 2018] [error] [client 127.0.0.1] File does not exist: W:/home/localhost/www/favicon.ico, referer: http://127.0.0.1:69/SuperAJAX.html
+[Wed May 16 16:39:18 2018] [notice] Parent: Received shutdown signal -- Shutting down the server.
+[Wed May 16 16:39:18 2018] [notice] Child 4028: Exit event signaled. Child process is ending.
+[Wed May 16 16:39:19 2018] [notice] Child 4028: Released the start mutex
+[Wed May 16 16:39:19 2018] [notice] Child 4028: All worker threads have exited.
+[Wed May 16 16:39:20 2018] [notice] Child 4028: Child process is exiting
+[Wed May 16 16:39:20 2018] [notice] Parent: Child process exited successfully.
